@@ -18,7 +18,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 const mongoSanitize = require('express-mongo-sanitize');
-const DbUrl = process.env.MONGODB_URL || 'mongodb://localhost:27017/yelp-camp';
+const DbUrl = process.env.MONGODB_URL
 
 const app = express();
 
