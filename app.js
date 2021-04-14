@@ -2,7 +2,6 @@ if(process.env.NODE_ENV !== "production"){
   require('dotenv').config();
 }
   
-
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override');
@@ -18,7 +17,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 const mongoSanitize = require('express-mongo-sanitize');
-const DbUrl = process.env.MONGODB_URL
+const DbUrl = process.env.MONGODB_URL ||  'mongodb://localhost:27017/yelp-camp';
 
 const app = express();
 
